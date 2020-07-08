@@ -1,0 +1,57 @@
+Masalah penugasan (assignment problem) merupakan kasus khusus dari masalah linear programming.
+
+Dalam dunia usaha (bisnis) dan industri, manajemen sering menghadapi masalah-masalah yang berhubungan dgn penugasan optimal dari bermacam-macam sumber yang produktif atau personalia yang mempunyai tingkat efisiensi yang berbeda-beda utk tugas yang berbeda pula.
+
+Contoh 1: Perusahaan memiliki 3 mesin, A, B dan C. Mesin-mesin tersebut mampu mengerjakan pekerjaan 1, 2, dan 3. Namun masing-masing memerlukan biaya yang berbeda-beda. Mesin A memerlukan biaya Rp. 10.000, Rp. 15.000, dan Rp. 7.500,- untuk mengerjakan pekerjaan 1, 2, dan 3 per jam. Mesin B memerlukan biaya Rp. 10.000, Rp. 10.000, dan Rp. 7.500,- untuk mengerjakan pekerjaan 1, 2, dan 3 per jam. Mesin B memerlukan biaya Rp. 15.000, Rp. 10.000, dan Rp. 7.500,- untuk mengerjakan pekerjaan 1, 2, dan 3 per jam. Dalam satu satuan waktu, masing-masing mesin hanya mampu mengerjakan 1 pekerjaan saja, tidak bisa mengerjakan paralel 2 atau 3 pekerjaan sekaligus. Sebaliknya, jika satu pekerjaan sudah dikerjakan oleh satu mesin, maka pekerjaan tersebut tidak dapat dikerjakan oleh mesin lain. Bagaimana komposisi penugasan mesin pada pekerjaan tersebut agar biaya nya minimum?.
+
+Contoh 2: Perusahaan sedang mengerjakan 4 proyek: A, B, C dan D. Proyek tersebut di lelang kepada 4 rekanan: I, II, III, dan IV. Setiap rekanan sebenarnya mampu mengerjakan ke-empat proyek tersebut. Namun sesuai aturan, satu rekanan hanya diijinkan mengerjakan 1 proyek dan 1 proyek hanya diijinkan dikerjakan oleh 1 rekanan. Jika proyek A, B, C, D dikerjakan oleh rekanan I, perusahaan dapat memperoleh profit Rp. 15 juta, Rp. 10 juta, Rp. 15 juta dan Rp. 17 juta. Jika proyek A, B, C, D dikerjakan oleh rekanan II, perusahaan dapat memperoleh profit Rp. 15 juta, Rp. 15 juta, Rp. 17 juta dan Rp. 15 juta. Jika proyek A, B, C, D dikerjakan oleh rekanan III, perusahaan dapat memperoleh profit Rp. 17 juta, Rp. 17 juta, Rp. 17 juta dan Ro. 17 juta. Jika proyek A, B, C, D dikerjakan oleh rekanan IV, perusahaan dapat memperoleh profit Rp. 15 juta, Rp. 17 juta, Rp. 15 juta dan Rp. 17 juta. Bagaimana sebaiknya plot pekerjaan yang optimal agak profit perusahaan dapat semaksimal mungkin?.
+
+Dalam praktek, bisa jadi komposisi penugasan melibatkan puluhan atau ratusan variabel keputusan. Sehingga diperlukan analisis yang logis untuk penugasan tersebut berdasarkan kondisi variabel batasan dan tujuan (maksimalisasi atau minimalisasi). Salah satu metode yang populer untuk pemecahan masalah penugasan adalah Metode Hungarian.
+
+Ciri Metode Hungarian: One to One Assignment (Independenly Assignment)
+ 
+METODE HUNGARIAN
+- Untuk dapat menerapkan metode Hungarian, jumlah sumber-sumber yg ditugaskan hrs sama persis dgn jumlah tugas yang akan diselesaikan.
+
+- Selain itu, setiap sumber hrs ditugaskan hanya satu tugas. Jadi masalah penugasan akan mencakup sejumlah n sumber yg mempunyai n tugas.
+
+- Ada n! (n faktorial) penugasan yg mungkin dlm suatu masalah karena perpasangan satu-satu. 
+
+- Masalah ini dpt dijelaskan dengan mudah oleh bentuk matrik segiempat, dimana baris-barisnya menunjukkan sumber-sumber dan kolom-kolomnya menunjukkan tugas-tugas.
+
+Contoh: Kasus Jumlah Baris = Jumlah Kolom
+
+- Suatu perusahaan kecil mempunyai 4 (empat) pekerjaan yg berbeda utk diselesaikan oleh 4 (empat) karyawan.
+- Biaya penugasan seorang karyawan utk pekerjaan yg berbeda karena sifat pekerjaan yg berbeda-beda.
+- Setiap karyawan mempunyai tingkat keterampilan, pengalaman kerja dan latar belakang pendidikan serta latihan yg berbeda, sehingga biaya penyelesaian pekerjaan yg sama oleh para karyawan yg berlainan juga berbeda.
+- Biaya penugasan karyawan utk masing-masing pekerjaan dinyatakan pada tabel berikut:
+
+Lakukan distribusi penugasan yang optimal agar diperoleh biaya penugasan karyawan yang minimum.
+
+Penyelesaian dengan Metode Hungarian
+
+(Nilai-nilai terkecil pada tiap baris di highlight dengan warna berbeda)
+
+Pada langkah ini harus di cek, apakah semua baris dan semua kolom sudah memiliki nilai 0 atau belum. Jika ada baris/kolom ada yang belum memiliki nilai 0 maka harus dibuatkan nilai 0 dengan cara seperti di langkah berikut ini:
+
+
+
+Jadi biaya penugasan karyawan minimal Rp. 68.000,- dengan:
+
+Karyawan A mengerjakan Pekerjaan III, Biaya Rp. 18.000.-
+Karyawan B mengerjakan Pekerjaan I, Biaya Rp. 14.000,-
+Karyawan C mengerjakan Pekerjaan II, Biaya Rp. 20.000,-
+Karyawan D mengerjakan Pekerjaan IV, Biaya Rp. 16.000,-
+Selengkapnya, jawaban dari contoh tersebut dapat di download di file lampiran berikut.
+
+Terkait dengan pembuatan garis 0:
+
+Tarik garis (bebas, vertikal/horizontal, tp tidak boleh silang/miring) yang memuat nilai 0 sebanyak mungkin.
+Nilai 0 yang sudah dibuat garis, tidak perlu dibuat garis lagi (kecuali akibat perpotongan dengan garis lain).
+Jumlah garis yang dibuat usahakan seminimal mungkin.
+Jika jumlah garis minimal yang dibuat kurang dari jumlah baris atau jumlah kolom maka harus dibuat garis baru, diawali dengan pembuatan nilai 0 dari nilai bukan 0 yang belum dilewati garis (lihat prosedur/contohdi atas)
+Jika jumlah garis minimal sama dengan jumlah baris atau jumlah kolom maka tabel penugasan sudah optimal, dilanjutkan dengan plot penugasan.
+ 
+Struktur dan penempatan garis bisa jadi memiliki banyak alternatif (tidak tunggal), namun nilai solusi akan sama. Sebagai contoh, untuk soal di atas, kita dapat menarik garis sbb:
+
+Berbeda struktur garis tapi dengan solusi yang sama-sama optimal.

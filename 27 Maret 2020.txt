@@ -1,0 +1,122 @@
+Selamat pagi/siang, kita masih pada topik model PL, khususnya di metode grafik.
+
+Jika ada pertanyaan terkait materi dan/atau tugas silahkan didiskusikan disini. Selain itu, materi kita lanjutkan untuk metode berikutnya, yaitu Metode Simpleks.
+
+Ok, masing-masing sambil buka file slide RO-03
+
+Di kuliah kelas terakhir, kita sudah bahas bagaimana metode grafik digunakan untuk memodelkan permasalahan program linier dan mencari solusinya.
+
+Masih terkait metode grafik, ada bbrp hal yang perlu diperhatikan:
+
+1. Hanya cocok untuk kasus dengan variabel keputusan paling banyak 2 variabel.
+
+2. Terdapat beberapa kemungkinan daerah solusi: solusi tunggal, solusi garis, poligon, solusi tak terbatas, atau tidak ada solusi.
+
+Di model PL dikenal adanya kasus khusus, yaitu:
+
+Multiple Optimal Solutions; Solusi optimal lebih dari satu.
+Solusi tidak layak; Tidak ada satu titik solusi yang memenuhi syarat sesuai fungsi-fungsi batasan.
+Solusi unbounded (tidak terbatas); ditemukan nilai solusi yang terlalu besar (untuk kasus maksimalisasi) atau terlalu kecil (untuk minimalisasi)
+
+Dari tugas yang sedang Anda kerjakan, coba tuliskan apa kendala yang Anda hadapi untuk menyelesaikan tugas tersebut? (Silahkan di reply) 
+
+Gak ada yg reply, berarti gak ada kendala ya?
+
+Ok, betul, khususnya soal No. 1, memang harus di analisis dengan baik. Salah dalam merumuskan model, maka solusi yang didapat juga akan salah. Lanjutkan
+
+Silahkan sambil di download materi RO-04, kita lanjut ke metode simpleks.
+
+Merupakan metode yang digunakan untuk menyelesaikan problem program linier secara umum (baik yang melibatkan dua variabel keputusan maupun lebih dari dua variabel keputusan)
+Diperkenalkan oleh George B. Dantzig pada tahun 1947.
+Metode simpleks merupakan metode perhitungan ulang (iteration) dimana langkah-langkah perhitungan yang sama diulang-ulang sebelum solusi optimal diperoleh.
+
+Persyaratan Metode Simpleks :
+Model program linier (atau disebut Canonical form) harus dirubah dulu kedalam suatu bentuk umum yang dinamakan ”bentuk baku” (standard form). Jadi jika model PL tidak dalam bentuk standar maka harus ditransformasikan dulu menjadi bentuk standar.
+Semua fungsi kendala/pembatas berupa persamaan dengan sisi kanan non-negatif.
+Semua variabel keputusan harus non-negatif.
+Fungsi tujuan dapat berupa maksimum atau minimum
+
+
+Jadi di dalam Metode Simpleks, model PL memiliki bentuk standar:
+ 
+Fungsi Tujuan :   Maks / Min Z = CX
+
+Batasan            :   AX = b (Perhatikan fungsi batasan dalam simpleks berupa persamaan)
+                                 X > 0
+
+Transformasi ke bentuk standar:
+
+Fungsi pembatas yang mempunyai tanda < diubah menjadi suatu bentuk persamaan (bentuk standar) dengan cara menambahkan suatu variabel baru yang dinamakan slack variable (variabel pengurang).
+Dengan adanya slack variable pada fungsi pembatas, maka fungsi tujuan juga harus disesuaikan dengan memasukkan unsur slack variable ini, dengan koefisien 0 (Karena slack variable tidak mempunyai kontribusi apa-apa terhadap fungsi tujuan, maka konstanta untuk slack variable tersebut dituliskan nol).
+Contoh: Mengubah model PL ke bentuk standar
+
+Fungsi tujuan   :
+
+  Maks Z = 4 X1 + 5 X2
+
+Fungsi pembatas        :    
+  X1 + 2 X2 < 40
+
+  4 X1 + 3 X2 < 120
+
+          X1 , X2 > 0
+
+akan diubah menjadi bentuk standar.
+
+Fungsi batasan:
+
+    X1 + 2 X2 < 40 diubah menjadi X1 + 2 X2 + S1 = 40
+
+    4 X1 + 3 X2 < 120 diubah  4 X1 + 3 X2 + S2 = 120
+
+Fungsi Tujuan:
+
+    Maks Z =  4 X1 + 5 X2 + 0 S1 + 0 S2
+
+ 
+
+Jadi Model Standar PL nya menjadi:
+
+   Maks Z =  4 X1 + 5 X2 + 0 S1 + 0 S2
+
+   Dengan batasan:
+
+   X1 + 2 X2 + S1 = 40
+
+   4 X1 + 3 X2 + S2 = 120
+
+   X1 , X2, S1, S2 > 0
+
+ 
+
+Contoh:
+
+  Maks Z = 60 X1 + 30 X2 +20 X3 
+
+  8 X1 + 6 X2 + X3  < 48
+
+  4 X1 + 2 X2  < 20
+
+   2 X1 + 1,5 X2 + 1,5 X3  < 8
+
+   X2  < 5
+
+   X1 , X2 , X3  > 0
+
+Bentuk Baku:
+
+Maks Z =  4 X1 + 5 X2 + 0 S1 + 0 S2 + + 0 S3 + 0 S4
+
+8 X1 + 6 X2 + X3  + S1 = 48
+
+4 X1 + 2 X2  + S2 = 20
+
+2 X1 + 1,5 X2 + 1,5 X3  + S3 = 8
+
+X2  + S4 = 5
+
+X1 , X2 , X3, S1, S2, S3, S4  > 0
+
+
+
+OK, poin2 penting untuk model simpleks sudah saya sebutkan, khususnya mengubah ke bentuk model PL standar. Pertemuan hari ini saya close dulu. Pertemuan berikutnya nanti membahas bagaimana mencari solusi dengan metode simpleks. Terima kasih dan selamat siang

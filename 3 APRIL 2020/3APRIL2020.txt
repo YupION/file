@@ -1,0 +1,94 @@
+Baik, minggu lalu kita sudah awali untuk pengantar metode simpleks. Langkah-langkah dalam menggunakan metode simpleks secara umum ada 3:
+
+- Mengubah model PL ke bentuk standar
+- Menyusun dan memperbatui tabel simpleks
+- Menentukan solusi optimal
+
+Minggu lalu sudah kita bahas, bagaimana mengubah model PL ke bentuk standar. Hari ini kita lanjutkan dengan metode simpleks untuk mencari solusi optimal.
+
+Menyusun Tabel Simpleks:
+
+Kita lihat model PL berikut (sudah dalam bentuk standar):
+
+   Maks Z =  4 X1 + 5 X2 + 0 S1 + 0 S2
+
+   Dengan batasan:
+
+   X1 + 2 X2 + S1 = 40
+
+   4 X1 + 3 X2 + S2 = 120
+
+   X1 , X2, S1, S2 > 0
+
+ Membuat Tabel simpleks awal:
+
+Kolom 1: cj -- > Koefisien variabel pada fungsi tujuan Z
+Kolom 2: Variabel basis (dalam hal ini adalah Si, yaitu variabel solusi semu)
+Kolom 3: Kuantitas/Jumlah (nilai ruas kanan dari batasan)
+kolom 4 dan seterusnya: Variabel Non-Basis (Xi) dan Variabel Basis (Si)
+Jadi jumlah kolom (khususnya kolom ke 4 dan seterusnya, tergantung jumlah variabel basis dan non basis).
+
+Variabel Non-Basis: Variabel Keputusan (Xi)
+
+Variabel Basis: Variabel solusi semu (Si)
+
+Silahkan dicermati dan kalau ada yang tidak jelas bisa langsung di reply.
+*ada foto simpleks-awal-2, simpleks-awal
+
+
+Tabel awal tersebut "BELUM OPTIMAL" karena nilai-nilai baris cj-zj berisi 0 dan/atau positif (lebih dari 0).
+
+Syarat tabel simpleks OPTIMAL jika nilai-nilai baris cj-zj berisi 0 dan/atau negatif (kurang dari 0). Jadi tabel tersebut harus diperbaiki untuk memperoleh solusi optimal.
+
+
+
+Kita lanjut ke pencarian solusi, perhatikan gambar berikut untuk ilustrasi. Ada beberapa tahapan dalam memproses tabel simpleks:
+
+Menentukan kolom pivot
+
+Pilih nilai terbesar di baris cj-zj, dan tetapkan sebagai kolom pivot. Pada contoh ini, kolom X2 terpilih sbg kolom pivot karena cj-zj=5 (terbesar.
+
+Menentukan baris pivot
+
+Bagi kolom kuantitas dengan nilai-nilai di kolom pivot (kolom X2). Dalam contoh ini: 40/2 = 20 dan 120/3=40. Pilih nilai terkecil dari kolom terakhir (baris S1 terpilih sbg baris pivot karena memiliki nilai kuantitas/kol pivot terkecil, yaitu 20)
+
+Menentukan nilai pivot
+
+Titik potong baris pivot dengan kolom pivot. Jadi nilai pivot = 2
+
+Memperbaiki tabel simpleks
+
+Untuk baris S1: Ganti baris S1 dengan X2 berikut koefisiennya (0;S1 diganti dengan 5;X2), bagi semua nilai di baris pivot tsb dengan nilai pivot.
+Untuk baris S2 (yang baru): Nilai yang sekolom dengan nilai pivot harus dibuat 0 dengan operasi: Baris S2 baru = Baris S2 lama – (nilai S2 sekolom pivot) x Baris Pivot .
+Perbarui nilai pada Baris zj dan cj-zj.
+Evaluasi nilai optimal
+
+Jika baris cj - zj semua nilai sudah 0 atau negatif maka tabel sudah optimal, jika belum maka tabel belum optimal.
+
+Pada contoh tsb, baris cj-zj belum semua negatif atau nol, jadi belum optimal. Maka prosedur di atas bisa diulangi kembali.
+
+Silahkan dicermati sebelum kita lanjut untuk mencari solusi optimal.
+*ada foto simpleks-1
+
+
+Pada satu putaran pengerjaan di atas, tabel simpleks masih belum optimal. Jadi diulangi kembali prosedur simpleks dengan mengambil pivot yang lain.
+
+Cermati tabel perbaikan berikut, dan sampai dua putaran ternyata tabel sudah optimal. Ditandai dengan nilai baris cj-zj sudah nol atau negatif (tidak ada yang positif lebih dari nol)
+*ada foto simpleks-2
+
+Ok, mungkin perlu waktu dan coret-coret an di kertas untuk dapat memahami tabel simpleks tersebut.
+
+Jadi silahkan dipelajari dengan menuliskan ulang mulai dari:
+
+- Model belum standar
+- Model standar
+- Tabel simpleks
+- Solusi tabel simpleks
+Untuk umpan balik, ada 1 soal latihan, dapat dikerjakan sebagai tugas dan dikumpulkan minggu depan.
+
+Materi hari ini cukup sampai disini, yaitu menyelesaikan model PL dengan metode simpleks.Silahkan dipelajari di rumah, jangan lupa pakai coret-coretan di kertas biar lebih lancar.
+
+Kita masih ada 1 pertemuan lagi sebelum UTS. Terima kasih dan selamat siang.
+
+
+

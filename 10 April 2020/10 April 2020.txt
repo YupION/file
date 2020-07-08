@@ -1,0 +1,16 @@
+
+Beberapa hal yang dapat dijadikan catatan:
+
+Baris pivot; Dasar pemilihan baris pivot untuk kasus maksimalisasi adalah nilai positif terkecil. Jika ada nilai lain, misal nilai tak hingga (~~) akibat pembagian dengan 0, atau nilai negatif (-) maka tidak layak dipilih menjadi baris pivot. Jika tidak ada satupun nilai positif terkecil maka model PL tidak dapat diselesaikan (unsolved model).
+Syarat tabel simpleks optimal; Untuk kasus maksimalisasi, tabel simpleks optimal jika pada baris cj-zj hanya terdapat nilai 0 dan/atau negatif. Jika pada baris cj-zj masih terdapat nilai positif lebih dari 0 (cj - zj >0) maka tabel simpleks belum optimal, dan perlu dilakukan perbaikan kembali sesuai prosedur simpleks.
+
+
+Untuk pelaksanaan UTS minggu depan (17/4/2020):
+
+Bahan ujian: s.d. pertemuan hari ini (kasus maksimalisasi). Silahkan di pelajari materi pada file-file yang sudah di upload di SiAdin, termasuk tugas-tugas yang sudah diberikan.
+Petunjuk teknis silahkan di baca di link berikut:
+
+
+Untuk tugas tgl 20 Maret 2020, tidak ada hitung-hitungan yang rumit sebagaimana di metode simpleks. Jadi bisa dipraktekkan sendiri di link berikut:
+
+http://www.phpsimplex.com/simplex/simplex.htm?l=en
